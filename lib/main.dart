@@ -73,30 +73,8 @@ class MyApp extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
-                  const TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Enter Your Password',
-                      hintStyle: TextStyle(
-                        color: Colors.black,
-                      ),
-                      filled: true,
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          width: 2.0,
-                          style: BorderStyle.solid,
-                          strokeAlign: BorderSide.strokeAlignOutside,
-                        ),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            width: 2.0,
-                            style: BorderStyle.solid,
-                            strokeAlign: BorderSide.strokeAlignInside),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 30,
+                  PasswordField(),
+                  SizedBox(
                     height: 40,
                   ),
                   Container(
@@ -128,6 +106,57 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class PasswordField extends StatefulWidget {
+  const PasswordField({super.key});
+
+  @override
+  State<PasswordField> createState() => _PasswordFieldState();
+}
+
+class _PasswordFieldState extends State<PasswordField> {
+  bool _isObscured = true;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      obscureText: _isObscured,
+      decoration: InputDecoration(
+        hintText: 'Enter Your Password',
+        hintStyle: const TextStyle(
+          color: Colors.black,
+        ),
+        filled: true,
+        focusedBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            width: 2.0,
+            // style: BorderStyle.solid,
+            // strokeAlign: BorderSide.strokeAlignOutside,
+          ),
+        ),
+        enabledBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            width: 2.0,
+            style: BorderStyle.solid,
+            strokeAlign: BorderSide.strokeAlignInside,
+          ),
+        ),
+        suffixIcon: IconButton(
+          icon: Icon(
+            _isObscured ? Icons.visibility_off : Icons.visibility,
+          ),
+          onPressed: () {
+            setState(
+              () {
+                _isObscured = !_isObscured;
+              },
+            );
+          },
         ),
       ),
     );
