@@ -39,7 +39,11 @@ Management System
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.bold),
                   ),
-                  Text('Email Address'),
+                  const Text('Email Address'),
+                  const SizedBox(
+                    width: 30,
+                    height: 30,
+                  ),
                   const TextField(
                       decoration: InputDecoration(
                     hintText: 'Enter Your Email',
@@ -74,11 +78,11 @@ Management System
                     ),
                   ),
                   PasswordField(),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 100),
+                    padding: const EdgeInsets.symmetric(horizontal: 100),
                     decoration: const BoxDecoration(
                       color: Colors.yellow,
                     ),
