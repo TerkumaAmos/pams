@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
                   ),
                   const Text(
                     '''Pipeline Activation
-          Management System 
-          (PAMS)
+Management System 
+(PAMS)
               ''',
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.bold),
