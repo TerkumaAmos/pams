@@ -20,14 +20,14 @@ class MyApp extends StatelessWidget {
               child: Container(
                 margin: const EdgeInsets.all(16),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  // mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       padding: const EdgeInsets.all(
-                        16.0,
+                        8.0,
                       ),
-                      decoration: const BoxDecoration(color: Colors.black),
+                      decoration: const BoxDecoration(color: Colors.brown),
                       child: const Text(
                         'PAMS',
                         style: TextStyle(fontSize: 20, color: Colors.yellow),
@@ -43,14 +43,14 @@ Management System
                     ),
                     const Text('Email Address'),
                     const SizedBox(
-                      width: 30,
-                      height: 30,
+                      width: 15,
+                      height: 15,
                     ),
                     const TextField(
                         decoration: InputDecoration(
                       hintText: 'Enter Your Email',
                       hintStyle: TextStyle(color: Colors.black),
-                      filled: true,
+                      filled: false,
                       // focusColor: Colors.black,
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
@@ -103,9 +103,10 @@ Management System
                       child: Text(
                         'Forgot password',
                         style: TextStyle(
-                            decoration: TextDecoration.underline,
-                            decorationColor: Colors.orange,
-                            color: Colors.orange),
+                          decoration: TextDecoration.underline,
+                          decorationColor: Colors.orange,
+                          color: Colors.orange,
+                        ),
                       ),
                     ),
                   ],
@@ -138,7 +139,7 @@ class _PasswordFieldState extends State<PasswordField> {
         hintStyle: const TextStyle(
           color: Colors.black,
         ),
-        filled: true,
+        filled: false,
         focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             width: 2.0,
