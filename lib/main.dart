@@ -61,8 +61,8 @@ Management System
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          width: 2.0,
-                          style: BorderStyle.solid,
+                          width: 25,
+                          style: BorderStyle.none,
                           strokeAlign: BorderSide.strokeAlignOutside,
                         ),
                       ),
@@ -149,7 +149,7 @@ class _PasswordFieldState extends State<PasswordField> {
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             width: 2.0,
-            style: BorderStyle.solid,
+            style: BorderStyle.none,
             strokeAlign: BorderSide.strokeAlignInside,
           ),
         ),
